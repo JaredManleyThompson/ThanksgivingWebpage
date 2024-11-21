@@ -1,0 +1,59 @@
+/* style.css */
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+header {
+    background-color: #050000;
+    color: white;
+    padding: 1em;
+    text-align: center;
+      
+}
+h1{
+    font-family: "Metal Mania", cursive;
+    color: darkorange;
+    font-size: 50px;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #050000;
+}
+
+nav ul li {
+    display: inline;
+    padding: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(245, 3, 3);
+    text-decoration: none;
+    font-size: 25px;
+    font-family: "Metal Mania", cursive;
+
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #050000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
