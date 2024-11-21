@@ -5,29 +5,53 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f7f7f7;
+    background-color: white;
+}
+/* Make the header container the right size and position */
+#header {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden; /* Prevents any overflow from the video */
+}
+  
+/* Style the video background */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the header's area */
+    z-index: -1; /* Places the video behind the content */
+}
+  
+  /* Content on top of the video */
+.header-content {
+    position: absolute;
+    top: 50%; /* Centers content vertically */
+    left: 50%; /* Centers content horizontally */
+    transform: translate(-50%, -50%); /* Adjusts the content for exact centering */
+    text-align: center;
+    color: white; /* Text color for contrast */
+    z-index: 1; /* Ensure the content is above the video */
 }
 
-header {
-    background-color: #050000;
-    color: white;
-    padding: 1em;
-    text-align: center;
-      
-}
 h1{
-    font-family: "Metal Mania", cursive;
-    color: darkorange;
+    font-family: "Arial";
     font-size: 50px;
 }
 
-
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: #101418;
+}
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #050000;
 }
 
 nav ul li {
@@ -36,10 +60,10 @@ nav ul li {
 }
 
 nav ul li a {
-    color: rgb(245, 3, 3);
+    color: white;
     text-decoration: none;
     font-size: 25px;
-    font-family: "Metal Mania", cursive;
+    font-family: "Arial";
 
 }
 
@@ -49,11 +73,15 @@ main {
 }
 
 footer {
-    background-color: #050000;
+    background-color: #101418;
     color: white;
     text-align: center;
     padding: 10px;
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+embed{
+    width:90%;
+    height:2160px;
 }
