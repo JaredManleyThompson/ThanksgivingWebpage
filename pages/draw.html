@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>64x36 Pixel Art</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+        .pixel-art {
+            display: grid;
+            grid-template-columns: repeat(64, 10px);
+            grid-template-rows: repeat(36, 10px);
+            gap: 1px;
+            background-color: #ddd;
+        }
+
+        .pixel {
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border: 1px solid transparent;
+            cursor: pointer;
+        }
+
+        .pixel:hover {
+            border-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="pixel-art"></div>
+
+    <script>
+        const pixelArt = document.querySelector('.pixel-art');
+
+        // Create 64x36 grid of divs
+        for (let i = 0; i < 64 * 36; i++) {
+            const pixel = document.createElement('div');
+            pixel.className = 'pixel';
+            pixel.addEventListener('click', () => {
+                // Toggle the pixel color
+                pixel.style.backgroundColor = 
+                    pixel.style.backgroundColor === 'black' ? 'white' : 'black';
+            });
+            pixelArt.appendChild(pixel);
+        }
+    </script>
+</body>
+</html>
