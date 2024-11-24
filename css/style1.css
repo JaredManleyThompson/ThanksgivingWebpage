@@ -1,0 +1,21 @@
+/* Style for the game area */
+#gameArea {
+    width: 100%;
+    height: 500px;
+    background-color: #cce7ff;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid black;
+}
+
+/* Style for the turkey */
+#turkey {
+    width: 100px;
+    position: absolute;
+    transition: all 0.5s ease-in-out; /* Makes turkey movement smooth */
+}
+
+/* Optional: Add some styles for the heading */
+h1 {
+    text-align: center;
+}

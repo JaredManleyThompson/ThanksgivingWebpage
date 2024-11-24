@@ -3,36 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>64x36 Pixel Art</title>
+    <title>480x270 Pixel Art</title>
     <style>
         body {
             display: flex;
-            justify-content: center;
             align-items: center;
-            height: 100vh;
             margin: 0;
+            border: 0;
+            padding: 0;
             background-color: #f4f4f4;
             font-family: Arial, sans-serif;
         }
 
         .pixel-art {
             display: grid;
-            grid-template-columns: repeat(64, 10px);
-            grid-template-rows: repeat(36, 10px);
+            grid-template-columns: repeat(480, 2px);
+            grid-template-rows: repeat(270, 2px);
             gap: 1px;
             background-color: #ddd;
         }
 
         .pixel {
-            width: 10px;
-            height: 10px;
+            width: 2px;
+            height: 2px;
             background-color: white;
             border: 1px solid transparent;
             cursor: pointer;
         }
 
         .pixel:hover {
-            border-color: #ccc;
+            border-color:gray;
         }
     </style>
 </head>
@@ -43,7 +43,7 @@
         const pixelArt = document.querySelector('.pixel-art');
 
         // Create 64x36 grid of divs
-        for (let i = 0; i < 64 * 36; i++) {
+        for (let i = 0; i < 480 * 270; i++) {
             const pixel = document.createElement('div');
             pixel.className = 'pixel';
             pixel.addEventListener('click', () => {
